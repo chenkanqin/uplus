@@ -1,0 +1,45 @@
+.detail-container {
+  height: 70vh;
+  border-bottom-left-radius: 100*1upx;
+  border-bottom-right-radius: 100*1upx;
+  z-index: 1;
+}
+
+.goods-image {
+  width: 500*1upx;
+}
+
+.cart-add-box {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .cart-add {
+    width: 100%;
+    bottom: 100*1upx;
+    left: 0;
+    height: 25vh;
+  }
+
+  .add-text {
+    margin-left: 20*1upx;
+  }
+}
+
+.sku-item {
+  margin-right: 40*1upx;
+  height: 80*1upx;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.font-v-icon{
+  margin-right: 20*1upx;
+}
+.app-name{
+  height: 40vh;
+  font-size: 100*1upx;
+  text-shadow: 2*1upx  2*1upx 2*1upx #fff;
+}

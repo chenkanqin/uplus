@@ -1,0 +1,31 @@
+.support-box {
+  width: 100%;
+  height: calc(100 * 1upx + env(safe-area-inset-bottom));
+}
+
+.bottom-button-container {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(env(safe-area-inset-bottom));
+  width: 100%;
+  min-height: 100*1upx;
+  max-width: $app-max-width;
+  background: var(--footer-background-color);
+  color: var(--footer-font-color);
+  box-sizing: border-box;
+  z-index: 9999;
+  overflow: hidden;
+  border-top: 1*1upx solid var(--border-color)
+}
+
+.support-bottom {
+  position: fixed;
+  height: calc(env(safe-area-inset-bottom));
+  width: 100%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  background: var(--footer-background-color);
+  z-index: 9999;
+}

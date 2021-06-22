@@ -1,0 +1,38 @@
+$bottom: 140*1upx;
+$buttonHeight: 100*1upx;
+.cart-container {
+  padding-bottom: calc(#{$bottom} - 100upx + #{$buttonHeight} + env(safe-area-inset-bottom));
+}
+
+.cart-title {
+  height: 10vh;
+  font-size: 40*1upx;
+}
+
+.add-icon {
+  width: 36*1upx;
+  height: 36*1upx;
+  border: 2*1upx solid var(--base-color);
+
+  &.active {
+    border: 2*1upx solid var(--color-warning);
+    color: var(--color-warning);
+  }
+}
+
+.goods-image {
+  width: 100*1upx;
+  height: 100*1upx;
+  font-size: 34*1upx;
+}
+
+.cart-pay {
+  bottom: calc(#{$bottom} + env(safe-area-inset-bottom));
+
+  .cart-pay-button {
+    height: $buttonHeight;
+    width: 80%;
+    border-radius: $buttonHeight;
+    letter-spacing: 3*1upx;
+  }
+}

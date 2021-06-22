@@ -1,0 +1,44 @@
+$height: 44*2upx;
+.header-container {
+  position: relative;
+  max-width: $app-max-width;
+  color: var(--header-font-color);
+
+  .status-bar {
+    width: 100%;
+    background-color: var(--header-background-color);
+  }
+
+  .support-top {
+    height: $height;
+  }
+
+  .header-left {
+    padding-left: 6*1upx;
+    min-width: 105*1upx;
+    cursor: pointer;
+  }
+
+  .header-content {
+    max-width: $app-max-width;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: var(--header-background-color);
+
+    .header-box {
+      height: $height;
+      padding: 0 $uni-spacing-row-base;
+
+      &.border {
+        border-bottom: 1*1upx solid #999;
+      }
+    }
+  }
+
+  .header-right {
+    width: 120*1upx;
+  }
+}

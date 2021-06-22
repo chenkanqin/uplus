@@ -1,0 +1,95 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/dashboard/index",
+      "pageParam": {
+        "tab": 1,
+        "icon": "icon-zhuye"
+      },
+      "name": "index",
+      "title": "首页"
+    },
+    {
+      "path": "pages/goods/detail/index",
+      "pageParam": {
+        "tab": 1,
+        "icon": "icon-zuanshi"
+      },
+      "name": "detail",
+      "title": "商品"
+    },
+    {
+      "path": "pages/cart/dashboard/index",
+      "pageParam": {
+        "tab": 1,
+        "icon": "icon-gouwudai"
+      },
+      "name": "cart",
+      "title": "购物车"
+    },
+    {
+      "path": "pages/account/dashboard/index",
+      "pageParam": {
+        "tab": 1,
+        "icon": "icon-yonghu"
+      },
+      "name": "account",
+      "title": "我的"
+    },
+    {
+      "path": "pages/account/footer/index",
+      "name": "footer",
+      "pageParam": {
+        "icon": "icon-fenlei"
+      },
+      "title": "导航"
+    },
+    {
+      "path": "pages/account/pages/index",
+      "name": "pages",
+      "pageParam": {
+        "icon": "icon-lujing"
+      },
+      "title": "路由"
+    },
+    {
+      "path": "pages/account/path/index",
+      "name": "path",
+      "pageParam": {
+        "icon": "icon-jiaoyin"
+      },
+      "title": "轨迹"
+    },
+    {
+      "path": "pages/account/error-diary/index",
+      "name": "errorDiary",
+      "pageParam": {
+        "icon": "icon-baocuofankui"
+      },
+      "title": "报错日记"
+    },
+    {
+      "path": "pages/account/change-theme/index",
+      "name": "changeTheme",
+      "pageParam": {
+        "icon": "icon-zhuti"
+      },
+      "title": "修改主题"
+    },
+    {
+      "path": "pages/error/404",
+      "name": "404",
+      "pageParam": {
+        "icon": "icon-icon-test"
+      },
+      "title": "404"
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "QQ:2052021114",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#fff",
+    "navigationStyle": "custom"
+  }
+}

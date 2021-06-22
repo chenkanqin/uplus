@@ -1,0 +1,26 @@
+@import "var";
+@import "font";
+@import "base";
+
+body {
+  // #ifdef H5
+  background-color: var(--body-color);
+  // #endif
+
+  // #ifndef H5
+  background-color: var(--app-color);
+  // #endif
+  font-size: $uni-font-size-base;
+  color: var(--base-color);
+}
+
+.uni-app--maxwidth {
+  max-width: $app-max-width;
+  background-color: var(--app-color);
+  margin: 0 auto;
+}
+
+.uni-container {
+  padding: 0 $uni-spacing-row-base;
+  background-color: var(--app-color);
+}

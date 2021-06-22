@@ -1,0 +1,28 @@
+.color-item {
+  &:before {
+    content: '';
+    padding-top: 100%;
+    float: left;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  &.active {
+    transform: scale(1.5);
+    box-shadow: 0 0 6*1upx rgba(0, 0, 0, 0.68);
+    border-radius: $uni-border-radius-base;
+  }
+}
+
+.save-btn {
+  height: 100*1upx;
+}
+
+.color-list {
+  max-height: 85vh;
+  overflow-y: auto;
+}

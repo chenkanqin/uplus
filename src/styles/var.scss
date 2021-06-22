@@ -1,0 +1,79 @@
+/** 水平间距 单个方向*/
+@each $type, $value in (sm, $uni-spacing-row-sm), (base, $uni-spacing-row-base), (lg, $uni-spacing-row-lg) {
+  @each $direction in right, left, top, bottom {
+    .padding-#{$direction}-#{$type} {
+      padding-#{$direction}: #{$value};
+    }
+    .margin-#{$direction}-#{$type} {
+      margin-#{$direction}: #{$value};
+    }
+  }
+
+  /** 水平间距 两个方向*/
+  .padding-row-#{$type} {
+    padding-left: #{$value};
+    padding-right: #{$value};
+  }
+
+  /** 垂直间距 两个方向*/
+  .padding-col-#{$type} {
+    padding-top: #{$value};
+    padding-bottom: #{$value};
+  }
+
+  // 全部padding
+  .padding-#{$type} {
+    padding: #{$value};
+  }
+
+  /** 水平间距 两个方向*/
+  .margin-row-#{$type} {
+    margin-left: #{$value};
+    margin-right: #{$value};
+  }
+
+  /** 垂直间距 两个方向*/
+  .margin-col-#{$type} {
+    margin-top: #{$value};
+    margin-bottom: #{$value};
+  }
+
+  // 全部margin
+  .margin-#{$type} {
+    margin: #{$value};
+  }
+
+}
+
+/** Border Radius*/
+@each $type, $value in (sm, $uni-border-radius-sm), (base, $uni-border-radius-base), (lg, $uni-border-radius-lg), (circle, $uni-border-radius-circle) {
+  .border-radius-#{$type} {
+    border-radius: #{$value};
+  }
+}
+
+/** font size*/
+@each $type, $value in (sm, $uni-font-size-sm), (base, $uni-font-size-base), (lg, $uni-font-size-lg) {
+  .font-size-#{$type} {
+    font-size: #{$value};
+  }
+}
+
+/** 行为颜色、字体颜色、背景颜色*/
+@include backgroundRes($--font-color, font, color);
+@include backgroundRes($--background-color, background);
+// 行为颜色 需要 color 和 background-color
+@include backgroundRes($--action-color, font, color);
+@include backgroundRes($--action-color, background);
+
+
+// 获取颜色的透明度值，暂时不知怎么使用var动态更新
+@function getColorAlpha($target, $colors : $--background-color) {
+  $color: '';
+  @each $name, $value in $colors {
+    @if $target == $name {
+      $color: $value
+    }
+  }
+  @return $color;
+}

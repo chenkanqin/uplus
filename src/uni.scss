@@ -1,0 +1,116 @@
+// app最大的宽度
+$app-max-width: 640px;
+
+$--action-color: (
+  //禁用点击颜色,
+        'disable-color':#c0c0c0,
+  // start 行为相关颜色
+        'color-primary':#115d37,
+        'color-warning':#feae57,
+        'color-success':#3bb86b,
+        'color-danger':#d94b46,
+);
+
+// 背景颜色相关  如果用样式 需要加上前缀 background- 例如：background-app-color
+$--background-color: (
+  // body html 背景颜色
+        'body-color': #222,
+  // app背景 相当于小程序page
+        'app-color':#f5f5f5,
+  // 主题背景颜色 默认颜色
+        'theme-color':#fff,
+);
+
+// 字体颜色相关 如果用样式 需要加上前缀 font-
+$--font-color: (
+  //基本色
+        'base-color':#222,
+  //浅色 主要是描述
+        'simple-color':#7b7b7b,
+  //反色
+        'inverse-color':#fff,
+  //form的placeholder
+        'placeholder-color':#808080,
+);
+
+/**
+ $list 配置列表
+ $tag 生成的标签名
+ $prefix 是否生成class
+*/
+@mixin backgroundRes($list, $prefix : '',$tag: background-color, ) {
+  @each $name, $value in $list {
+    @if $prefix != '' {
+      .#{$prefix}-#{$name} {
+        #{$tag}: var(--#{$name});
+      }
+    } @else {
+      --#{$name}: #{$value}
+    }
+  }
+}
+
+@mixin theme {
+  @include backgroundRes($--background-color);
+  @include backgroundRes($--font-color);
+  @include backgroundRes($--action-color);
+
+  // start header 相关颜色
+  --header-background-color: #fff;
+  --header-font-color: #222;
+  // end header 相关颜色
+
+  // start 底部导航相关
+  --footer-background-color: #fff;
+  --footer-font-color: #222;
+  --footer-active-font-color: #d94b46; // 选择的字体颜色
+  // end 底部导航相关
+
+  // 遮罩颜色
+  --mask-background-color: rgba(0, 0, 0, 0.4);
+  // 边框颜色
+  --border-color: #c8c7cc;
+}
+
+/* #ifdef H5  */
+.theme-style {
+  @include theme
+}
+
+/* #endif  */
+
+/* #ifndef H5 */
+body {
+  @include theme
+}
+
+/* #endif */
+
+/* 文字尺寸 */
+$uni-font-size-sm: 24*1upx;
+$uni-font-size-base: 28*1upx;
+$uni-font-size-lg: 32*1upx;
+
+/* 图片尺寸 */
+$uni-img-size-sm: 40*1upx;
+$uni-img-size-base: 52*1upx;
+$uni-img-size-lg: 80*1upx;
+
+/* Border Radius */
+$uni-border-radius-sm: 4*1upx;
+$uni-border-radius-base: 6*1upx;
+$uni-border-radius-lg: 12*1upx;
+$uni-border-radius-circle: 50%;
+
+/* 水平间距 */
+$uni-spacing-row-sm: 10*1upx;
+$uni-spacing-row-base: 20*1upx;
+$uni-spacing-row-lg: 30*1upx;
+
+/* 透明度 */
+$uni-opacity-disabled: 0.3; // 组件禁用态的透明度
+:export {
+  @include theme
+}
+
+@import "styles/var";

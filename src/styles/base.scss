@@ -1,0 +1,145 @@
+.display-flex {
+  display: flex;
+}
+
+.display-inline-flex {
+  display: inline-flex;
+}
+
+.box-sizing-border-box {
+  box-sizing: border-box;
+}
+
+.flex-flow-wrap {
+  flex-flow: wrap;
+}
+
+.align-items-flex-end {
+  align-items: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.display-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.width-100 {
+  width: 100vw;
+  max-width: $app-max-width;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.bg-center {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/** 以高度居中*/
+.bg-center-height {
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+.text-overflow-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.text-overflow-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+  max-width: $app-max-width;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.font-weight-bolder {
+  font-weight: bolder;
+}
+
+.border-base {
+  border: 1*1upx solid var(--border-color);
+}
+.border-bottom {
+  border-bottom: 1*1upx solid var(--border-color);
+}
+
+.box-shadow {
+  box-shadow: 4*2upx 4*2upx 6*2upx rgba(39, 39, 39, 0.2);
+}
+
+.remove-box-shadow {
+  box-shadow: none;
+}
+
+.transition-base {
+  transition: all .1s;
+}
