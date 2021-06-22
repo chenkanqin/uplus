@@ -53,7 +53,7 @@
 ## 预览
 
 ![](https://i.postimg.cc/yNVps9nW/29-9a05dbe3d214c191bda05d6d558e582a-9f0ed86ddc4aa5db9ae641c342f227b2.png) <br> <br> 
- ### [直接跳转预览](http://uplus.evue.top/)
+ ### [直接跳转预览](http://view-uplus.evue.top/#/)
 
 
 ## 目录结构
